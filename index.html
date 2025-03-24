@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Retráctil</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+  font-weight: 400;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 50px;
+}
+.linea{
+  background: #550b51;
+  width: 100%;
+  height:15px;
+  display: block;
+
+}
+.galeria{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  width:95%;
+  margin:auto;
+  grid-gap:10px;
+  padding:40px 0;
+  overflow:hidden;
+}
+.galeria > a{
+  display: block;
+  position:relative;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+.galeria img{
+  width:100%;
+  vertical-align: top;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.galeria a:hover img{
+  filter:blur(2px);
+  transform: rotate(10deg) scale(1.3);
+}
+.light-box{
+  position:fixed;
+  top:0;
+  left:0;
+  background: rgba(0,0,0,0.5);
+  /*transition: transform 0.3s;*/
+  width:100%;
+  height: 100vh;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transform:scale(0);
+}
+.light-box img{
+  width: 50vw;
+  max-height: 70vh;
+}
+
+.light-box:target{
+  transform: scale(1);
+}
+.close{
+  display: block;
+  position: absolute;
+  top:60px;
+  right:280px;
+  background: #851919;
+  color: white;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+.next{
+  display: block;
+  background: #851919;
+  color: white;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .menu-item {
+            position: relative;
+            margin: 0 10px;
+        }
+
+        .menu-item button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-item:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .galeria img {
+            width: 200px;
+            margin: 5px;
+            border: 2px solid #333;
+        }
+
+        iframe {
+            margin: 10px;
+            width: 560px;
+            height: 315px;
+        }
+    
+
+
+
+</style>
+</head>
+<body background="https://wallpaperaccess.com/full/3467485.jpg">
+
+
+
+ <h1>Proyecto de Clasificación de Animales</h1>
+
+    <div class="menu">
+        <div class="menu-item">
+            <button>Aves</button>
+            <div class="dropdown">
+                <a href="aguila.html">Águila</a>
+                <a href="colibri.html">Colibrí</a>
+                <a href="flamenco.html">Flamenco</a>
+                <a href="buho.html">Búho</a>
+                <a href="pato.html">Pato</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <button>Reptiles</button>
+            <div class="dropdown">
+                <a href="iguana.html">Iguana</a>
+                <a href="cocodrilo.html">Cocodrilo</a>
+                <a href="serpiente.html">Serpiente</a>
+                <a href="lagarto.html">Lagarto</a>
+                <a href="tortuga.html">Tortuga</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <button>Anfibios</button>
+            <div class="dropdown">
+                <a href="rana.html">Rana</a>
+                <a href="sapo.html">Sapo</a>
+                <a href="salamandra.html">Salamandra</a>
+                <a href="triton.html">Tritón</a>
+                <a href="cecilia.html">Cecilia</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <button>Peces</button>
+            <div class="dropdown">
+                <a href="https://animalesmarinos.info/salmon/">Salmón</a>
+                <a href="https://www.bioenciclopedia.com/tiburon-2.html">Tiburón</a>
+                <a href="https://www.bioenciclopedia.com/pez-payaso-171.html">Pez Payaso</a>
+                <a href="https://es.wikipedia.org/wiki/Thunnus">Atún</a>
+                <a href="https://www.ecologiaverde.com/pez-globo-caracteristicas-habitat-y-que-come-4095.html">Pez Globo</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <button>Mamíferos</button>
+            <div class="dropdown">
+                <a href="https://es.wikipedia.org/wiki/Panthera_leo">León</a>
+                <a href="https://www.bioenciclopedia.com/elefante-29.html">Elefante</a>
+                <a href="https://www.anipedia.net/ballenas/">Ballena</a>
+                <a href="https://es.wikipedia.org/wiki/Canis_familiaris">Perro</a>
+                <a href="https://es.wikipedia.org/wiki/Felis_silvestris_catus">Gato</a>
+            </div>
+        </div>
+    </div>
+
+  <h1>ANIMALES</h1>
+  <span class="linea"></span>
+  <section class="galeria">
+    <a href="#image1"><img src="animal1.jpg" alt=""></a>
+    <a href="#image2"><img src="animal2.jpg" alt=""></a>
+    <a href="#image3"><img src="animal3.jpg" alt=""></a>
+    <a href="#image4"><img src="animal4.jpg" alt=""></a>
+    <a href="#image5"><img src="animal5.jpg" alt=""></a>
+    <a href="#image6"><img src="animal6.jpg" alt=""></a>
+    <a href="#image7"><img src="animal7.jpg" alt=""></a>
+    <a href="#image8"><img src="animal8.jpg" alt=""></a>
+  </section>
+  <article class="light-box" id="image1">
+    <a href="#image8" class="next"><</i></a>
+    <img src="animal1.jpg" alt="">
+    <a href="#image2" class="next">></i></a>
+    <a href="" class="close">X</a>
+  </article>
+  <article class="light-box" id="image2">
+    <a href="#image1" class="next"><</i></a>
+    <img src="animal2.jpg" alt="">
+    <a href="#image3" class="next">></i></a>
+    <a href="" class="close">X</a>
+  </article>
+  <article class="light-box" id="image3">
+    <a href="#image2" class="next"><</i></a>
+    <img src="animal3.jpg" alt="">
+    <a href="#image4" class="next">></i></a>
+    <a href="" class="close">X</a>
+  </article>
+  <article class="light-box" id="image4">
+    <a href="#image3" class="next"><</i></a>
+    <img src="animal4.jpg" alt="">
+    <a href="#image5" class="next">></i></a>
+    <a href="" class="close">X</a>
+  </article>
+  <article class="light-box" id="image5">
+    <a href="#image4" class="next"><</i></a>
+    <img src="animal5.jpg" alt="">
+    <a href="#image6" class="next">></i></a>
+    <a href="" class="close">X</a>
+  </article>
+  <article class="light-box" id="image6">
+    <a href="#image5" class="next"><</i></a>
+    <img src="animal6.jpg" alt="">
+    <a href="#image7" class="next">></i></a>
+    <a href="" class="close">X</a>
+  </article>
+  <article class="light-box" id="image7">
+    <a href="#image6" class="next"><</i></a>
+    <img src="animal7.jpg" alt="">
+    <a href="#image8" class="next">></i></a>
+    <a href="" class="close">X</a>
+  </article>
+  <article class="light-box" id="image8">
+    <a href="#image7" class="next"><</i></a>
+    <img src="animal8.jpg" alt="">
+    <a href="#image1" class="next">></i></a>
+    <a href="" class="close">X</a>
+  </article>
+  
+</body>
+</html>
